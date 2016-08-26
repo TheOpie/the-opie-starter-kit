@@ -1,0 +1,117 @@
+@import 'variables';
+@import 'mixins';
+
+
+// Material Design helper classes
+//
+// Icons
+// Rules for sizing and displaying icons.
+//
+// Styleguide 1.
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+// Rules for using icons as black on a light background. */
+.material-icons.md-dark             { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+// Rules for using icons as white on a dark background. */
+.material-icons.md-light             { color: rgba(255, 255, 255, 1);   }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+// Material Design override classes
+//
+// Moving the slideout drawer to the right.
+//
+// Styleguide 1.
+
+.mdl-layout__drawer-button, .mdl-layout__drawer{
+  left: initial;
+  right: 0;
+}
+
+.mdl-layout__drawer{
+  transform:translateX(250px);
+}
+
+// Utility classes
+//
+// Misc. helpers
+// mostly ideas stolen from Boostrap
+//
+// Styleguide 1.
+
+.invisible { @extend %visuallyhidden; }
+
+
+// Project classes
+//
+// Classes for basic parallax sections
+//
+// Styleguide 1.
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.section {
+  display: block;
+  min-height: 30vh;
+  background-color:$white;
+}
+
+// Parallax image wrapper
+.image-full {
+  margin: 40px 0 0 0;
+  position: relative;
+  &.stacked {
+    margin: 0;
+  }
+  .content {
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+  }
+}
+
+// Parallax image div
+.p-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+// Parallax styles
+.parallax {
+  background-attachment: fixed;
+}
+
+// Individual parallax sections
+.p-image-01 {
+  //background-color: purple;
+  background-image: url(../images/07-Bogie-highlight-2x.jpg);
+}
+
+.p-image-02 {
+  //background-color: pink;
+  background-image: url(../images/04-1st-class-interior-2x.jpg);
+}
+
+.p-image-03 {
+  background-image: url(../images/photo.jpg);
+    @include media-query("when-xs", max) {
+      background-image: url(../images/0403.jpg);
+  }
+}

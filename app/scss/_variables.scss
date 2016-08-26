@@ -1,0 +1,52 @@
+// Sample variables
+// update when design is finalized
+
+$button-cta: #548300;
+
+$dark-blue: #00344d;
+$darker-blue: #002436; //Hoffman blue
+$light-blue: #5bcbf7; //accent blue
+
+$gradient-primary-left: $button-cta;
+$gradient-primary-right: #00314f;
+$gradient-secondary-left: #00658c;
+$gradient-secondary-right: #00263d;
+
+$text-color: #737575; //ADA approved gray
+$text-color-blue: $dark-blue;
+
+$gray: #414141; //dark gray - site background
+$light-gray: #e1e1e1; //message module background
+$lighter-gray: #f4f4f6; // plain section background
+$off-gray: #d7d7d7; //sidebar background
+$off-white: #f4f4f6; //main-content background
+$white: #ffffff;
+
+// Font-Size
+// $base-font-size: 1.3em;
+$base-font-size: 14px;
+
+// Line-Height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+
+// Media queries breakpoints
+//
+// Defines the breakpoints where layout will change
+// adapting to different screen sizes.
+// (stolen wholesale from Bootstrap)
+
+// Extra small screen / phone
+$screen-xs-min:              480px;
+// Small screen / tablet
+$screen-sm-min:              768px;
+// Medium screen / desktop
+$screen-md-min:              992px;
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
