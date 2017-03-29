@@ -3,84 +3,85 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Amtrak's new high speed rail offerings">
-  <title>Amtrak's New High Speed Rail</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title></title>
 
   <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/material.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/print.css">
   <!--endbuild-->
 
 </head>
 
 <body>
 
-  <!-- Always shows a header, even in smaller screens. -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title"><i class="material-icons md-48">face</i></span> <!-- logo -->
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href=""><i class="fa fa-facebook fa-3x" aria-hidden="true"></i><span class="invisible">facebook</span></a>
-          <a class="mdl-navigation__link" href=""><i class="fa fa-youtube fa-3x" aria-hidden="true"></i><span class="invisible">youtube</span></a>
-          <a class="mdl-navigation__link" href=""><i class="fa fa-twitter fa-3x" aria-hidden="true"></i><span class="invisible">twitter</span></a>
-          <a class="mdl-navigation__link" href=""><i class="fa fa-instagram fa-3x" aria-hidden="true"></i><span class="invisible">instagram</span></a>
-        </nav>
-      </div>
-    </header>
-    <!-- by default of this starter kit, hamburger menu is on the right on mobile only -->
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Title</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i><span class="invisible">facebook</span></a>
-        <a class="mdl-navigation__link" href=""><i class="fa fa-youtube fa-2x" aria-hidden="true"></i><span class="invisible">youtube</span></a>
-        <a class="mdl-navigation__link" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i><span class="invisible">twitter</span></a>
-        <a class="mdl-navigation__link" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><span class="invisible">instagram</span></a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <!-- content goes here -->
-
-
-        <div class="sectionl">
-          <div class=""></div>
-          <div class="content">
-            <p>test content</p>
+    <header>
+      <div class="container" style="border: 1px solid blue">
+        <div class="row">
+          <div class="col">
+            <img src="images/fish.png">
+            <img src="images/logo.png">
+          </div>
+          <div class="col">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </div>
         </div>
+
       </div>
-      <!-- to make a sticky footer push HTML outside 'page-content' div -->
-      <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-          <div class="mdl-logo">Logo</div>
-          <ul class="mdl-mini-footer__link-list">
-            <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i><span class="invisible">twitter</span></a></li>
-            <li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i><span class="invisible">facebook</span></a></li>
-            <li><a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i><span class="invisible">youtube</span></a></li>
-            <li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><span class="invisible">instagram</span></a></li>
-            <li><a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i><span class="invisible">linkedin</span></a></li>
-            <li><a href="#"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i><span class="invisible">pinterest</span></a></li>
-            <li><a href="#">Privacy & Terms</a></li>
-          </ul>
-        </div>
-      </footer>
-    </main>
-  </div>
+    </header>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->
 
 
   <!--build:js js/main.min.js -->
   <script src="js/jquery.slim.min.js"></script>
-  <script src="js/material.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
   <!-- endbuild -->
 </body>

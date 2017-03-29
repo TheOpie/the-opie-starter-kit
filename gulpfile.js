@@ -22,15 +22,19 @@ var config = {
 
 var bowerJSPaths = [
     config.bowerDir+'/jquery/dist/jquery.slim.min.js',
-    config.bowerDir+'/material-design-lite/material.min.js',
-    config.bowerDir+'/material-design-lite/material.min.js.map'
+    config.bowerDir+'/bootstrap/dist/js/bootstrap.min.js',
+    config.bowerDir+'/tether/dist/js/tether.min.js'
   ];
 
 var bowerCSSPaths = [
     config.bowerDir+'/animate.css/animate.min.css',
     config.bowerDir+'/fontawesome/css/font-awesome.min.css',
-    config.bowerDir+'/material-design-lite/material.min.css',
-    config.bowerDir+'/material-design-lite/material.min.css.map'
+    config.bowerDir+'/bootstrap/dist/css/bootstrap-grid.min.css',
+    config.bowerDir+'/bootstrap/dist/css/bootstrap-grid.min.css.map',
+    config.bowerDir+'/bootstrap/dist/css/bootstrap-reboot.min.css',
+    config.bowerDir+'/bootstrap/dist/css/bootstrap-reboot.min.css.map',
+    config.bowerDir+'/bootstrap/dist/css/bootstrap.min.css',
+    config.bowerDir+'/bootstrap/dist/css/bootstrap.min.css.map'
   ];
 
 var bowerFontPaths = [
@@ -131,9 +135,7 @@ gulp.task('fonts', function() {
 
 // Cleaning
 gulp.task('clean', function() {
-  return del.sync('dist').then(function(cb) {
-    return cache.clearAll(cb);
-  });
+  return del(['dist']).then(cb => cache.clearAll(cb));
 })
 
 gulp.task('clean:dist', function() {
