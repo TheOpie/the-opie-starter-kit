@@ -1,117 +1,255 @@
 @import 'variables';
 @import 'mixins';
 
-
-// Material Design helper classes
-//
-// Icons
-// Rules for sizing and displaying icons.
-//
-// Styleguide 1.
-
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-// Rules for using icons as black on a light background. */
-.material-icons.md-dark             { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-// Rules for using icons as white on a dark background. */
-.material-icons.md-light             { color: rgba(255, 255, 255, 1);   }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-
-// Material Design override classes
-//
-// Moving the slideout drawer to the right.
-//
-// Styleguide 1.
-
-.mdl-layout__drawer-button, .mdl-layout__drawer{
-  left: initial;
-  right: 0;
-}
-
-.mdl-layout__drawer{
-  transform:translateX(250px);
-}
-
-// Utility classes
-//
-// Misc. helpers
-// mostly ideas stolen from Boostrap
-//
-// Styleguide 1.
-
-.invisible { @extend %visuallyhidden; }
-
-
-// Project classes
-//
-// Classes for basic parallax sections
-//
-// Styleguide 1.
-
 body {
-  font-family: Arial, sans-serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $text-color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  background: #ffffff url("../images/background.png") repeat;
+
 }
 
-.section {
-  display: block;
-  min-height: 30vh;
-  background-color:$white;
+.container {
+  @include media-query ($screen-md-min) {
+    width: 960px;
+  }
 }
 
-// Parallax image wrapper
-.image-full {
-  margin: 40px 0 0 0;
-  position: relative;
-  &.stacked {
+.search-widget {
+  a {
+    color: black;
+  }
+}
+
+header {
+  img {
+    margin-top: 0.5em;
+  }
+}
+
+.navbar.navbar-toggleable-md {
+  z-index: 100;
+}
+
+#main-nav {
+
+  margin-left: 1em;
+  li:not(:last-child) {
+    border-right: 1px solid #333;
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.navbar-brand {
+  @include calc(margin-left, "50% - 78px");
+}
+
+.container-fluid {
+  z-index: 50;
+  margin-bottom: 2em;
+  .row {
+    background-color: #e2e2e2;
+  }
+}
+
+.home-intro, .home-secondary-info {
+  margin-bottom: 1.5em;
+}
+
+.card {
+  @include border-radius(10px);
+  .card-header {
+    background-color: black;
+    color: #ccc;
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
+
+footer {
+  color: white;
+  .row {
+    padding: 1.5em 1em;
+    &.copyright {
+      padding: 0 1em;
+    }
+    .row  {
+      padding: 0;
+    }
+  }
+  strong {
+    text-transform: uppercase;
+    margin-bottom: .75em;
+    display: block;
+  }
+  p,li {
+    color:#999;
+    font-size: 10pt;
+  }
+  ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
     margin: 0;
   }
-  .content {
-    background-color: transparent;
-    position: absolute;
-    left: 50%;
-    top: 25%;
+
+  li {
+      padding-left: 0px;
+  }
+
+  li:before {
+      content: "+";
+      padding-right: 4px;
+      color: #999;
+  }
+  .col-sm-12 {
+    border-top: 1px solid #999;
+    padding-top: 1em;
   }
 }
 
-// Parallax image div
-.p-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-// Parallax styles
-.parallax {
-  background-attachment: fixed;
-}
-
-// Individual parallax sections
-.p-image-01 {
-  //background-color: purple;
-  background-image: url(../images/07-Bogie-highlight-2x.jpg);
-}
-
-.p-image-02 {
-  //background-color: pink;
-  background-image: url(../images/04-1st-class-interior-2x.jpg);
-}
-
-.p-image-03 {
-  background-image: url(../images/photo.jpg);
-    @include media-query("when-xs", max) {
-      background-image: url(../images/0403.jpg);
+@include media-query('when-sm', max) {
+  #home-carousel {
+    display: none;
   }
 }
+
+@include media-query('when-xs') {
+  header {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .navbar-brand {
+    min-height: 2em;
+    img {
+      display: none;
+    }
+  }
+  .navbar {
+    margin: 1em 0;
+  }
+  #home-carousel {
+    margin-bottom: 1.5em;
+  }
+  .container-fluid {
+    .row {
+      margin-top: -1em;
+      .col-sm-12 {
+        padding: 2em 0 2em 1.5em;
+      }
+    }
+  }
+}
+
+@include media-query('when-sm') {
+  .search-widget {
+    .form-inline {
+      width: 400px;
+      .form-control {
+        width: 300px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
+      a {
+        &:after {
+          content: ' | ';
+          padding-left: .25em;
+        }
+      }
+      li:last-child {
+        a:after {
+          content: '';
+        }
+      }
+    .nav-link {
+      padding: .5em 0 .5em .5em;
+    }
+    button {
+      background: black;
+      color:white;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 11pt;
+    }
+  }
+}
+
+@include media-query('when-md') {
+  .navbar-brand {
+    img {
+      display: inline;
+    }
+  }
+  .container {
+    width: 960px;
+  }
+  .home-intro {
+    .card {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  #home-carousel {
+    .carousel-inner {
+      margin-left: 24px;
+      max-width: 882px;
+      padding: 1em;
+      background-color: white;
+      border: 1px solid black;
+      @include border-radius(10px);
+    }
+
+    .carousel-control-prev-icon {
+      background-image:url("../images/left-arrow.png");
+      margin-left: -46px;
+      width: 41px;
+      height: 41px;
+    }
+    .carousel-control-next-icon {
+      background-image:url("../images/right-arrow.png");
+      margin-right: -46px;
+      width: 41px;
+      height: 41px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+      width: 6%;
+      opacity: 1;
+    }
+
+  }
+
+  .container-fluid {
+    .row {
+      margin-top: -4em;
+        .col-sm-12 {
+          padding: 2em 0 2em 15.5em;
+        }
+      }
+    }
+
+  .navbar.navbar-toggleable-md {
+    max-height: 45px;
+    margin: 35px 0;
+    margin-bottom: 4em;
+    background: linear-gradient(to bottom, #666666 0%,#000000 100%);
+  }
+
+  .home-secondary-info {
+    width: 95%;
+    margin: 0 auto 2.5em;
+  }
+  footer {
+    margin-top: 3em;
+  }
+}
+

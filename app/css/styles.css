@@ -1,13 +1,4 @@
-.invisible {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute; }
-
+/* CSS3 calc() function to perform calculations */
 /*
 @mixin when-xs($rules...) {
   @media (max-width: $screen-xs-max) { $rules }
@@ -21,79 +12,172 @@
 @mixin when-lg($rules...) {
   @media (min-width: $screen-lg-min) { $rules }
 } */
-.material-icons.md-18 {
-  font-size: 18px; }
-
-.material-icons.md-24 {
-  font-size: 24px; }
-
-.material-icons.md-36 {
-  font-size: 36px; }
-
-.material-icons.md-48 {
-  font-size: 48px; }
-
-.material-icons.md-dark {
-  color: rgba(0, 0, 0, 0.54); }
-
-.material-icons.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26); }
-
-.material-icons.md-light {
-  color: white; }
-
-.material-icons.md-light.md-inactive {
-  color: rgba(255, 255, 255, 0.3); }
-
-.mdl-layout__drawer-button, .mdl-layout__drawer {
-  left: initial;
-  right: 0; }
-
-.mdl-layout__drawer {
-  transform: translateX(250px); }
-
 body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12pt;
   line-height: 1.5;
   color: #737575;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  font-smoothing: antialiased;
+  background: #ffffff url("../images/background.png") repeat; }
 
-.section {
-  display: block;
-  min-height: 30vh;
-  background-color: #ffffff; }
+.search-widget a {
+  color: black; }
 
-.image-full {
-  margin: 40px 0 0 0;
-  position: relative; }
-  .image-full.stacked {
+header img {
+  margin-top: 0.5em; }
+
+.navbar.navbar-toggleable-md {
+  z-index: 100; }
+
+#main-nav {
+  margin-left: 1em; }
+  #main-nav li:not(:last-child) {
+    border-right: 1px solid #333; }
+  #main-nav a {
+    color: white;
+    text-transform: uppercase;
+    padding-left: 1em;
+    padding-right: 1em; }
+
+.navbar-brand {
+  margin-left: -webkit-calc(50% - 78px);
+  margin-left: -moz-calc(50% - 78px);
+  margin-left: calc(50% - 78px); }
+
+.container-fluid {
+  z-index: 50;
+  margin-bottom: 2em; }
+  .container-fluid .row {
+    background-color: #e2e2e2; }
+
+.home-intro, .home-secondary-info {
+  margin-bottom: 1.5em; }
+
+.card {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+  .card .card-header {
+    background-color: black;
+    color: #ccc; }
+    .card .card-header:first-child {
+      border-radius: 10px 10px 0 0; }
+
+footer {
+  color: white; }
+  footer .row {
+    padding: 1.5em 1em; }
+    footer .row.copyright {
+      padding: 0 1em; }
+    footer .row .row {
+      padding: 0; }
+  footer strong {
+    text-transform: uppercase;
+    margin-bottom: .75em;
+    display: block; }
+  footer p, footer li {
+    color: #999;
+    font-size: 10pt; }
+  footer ul {
+    list-style: none;
+    /* Remove list bullets */
+    padding: 0;
     margin: 0; }
-  .image-full .content {
-    background-color: transparent;
-    position: absolute;
-    left: 50%;
-    top: 25%; }
+  footer li {
+    padding-left: 0px; }
+  footer li:before {
+    content: "+";
+    padding-right: 4px;
+    color: #999; }
+  footer .col-sm-12 {
+    border-top: 1px solid #999;
+    padding-top: 1em; }
 
-.p-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; }
+@media only screen and (max-width: 767px) {
+  #home-carousel {
+    display: none; } }
 
-.parallax {
-  background-attachment: fixed; }
+@media only screen and (min-width: 320px) {
+  header img {
+    margin: 0 auto; }
+  .navbar-brand {
+    min-height: 2em; }
+    .navbar-brand img {
+      display: none; }
+  .navbar {
+    margin: 1em 0; }
+  #home-carousel {
+    margin-bottom: 1.5em; }
+  .container-fluid .row {
+    margin-top: -1em; }
+    .container-fluid .row .col-sm-12 {
+      padding: 2em 0 2em 1.5em; } }
 
-.p-image-01 {
-  background-image: url(../images/07-Bogie-highlight-2x.jpg); }
+@media only screen and (min-width: 768px) {
+  .search-widget .form-inline {
+    width: 400px; }
+    .search-widget .form-inline .form-control {
+      width: 300px;
+      padding-top: 0px;
+      padding-bottom: 0px; }
+  .search-widget a:after {
+    content: ' | ';
+    padding-left: .25em; }
+  .search-widget li:last-child a:after {
+    content: ''; }
+  .search-widget .nav-link {
+    padding: .5em 0 .5em .5em; }
+  .search-widget button {
+    background: black;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 11pt; } }
 
-.p-image-02 {
-  background-image: url(../images/04-1st-class-interior-2x.jpg); }
-
-.p-image-03 {
-  background-image: url(../images/photo.jpg); }
-  @media only screen and (max-width: 479px) {
-    .p-image-03 {
-      background-image: url(../images/0403.jpg); } }
+@media only screen and (min-width: 992px) {
+  .navbar-brand img {
+    display: inline; }
+  .container {
+    width: 960px; }
+  .home-intro .card {
+    width: 95%;
+    margin: 0 auto; }
+  #home-carousel .carousel-inner {
+    margin-left: 24px;
+    max-width: 882px;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px; }
+  #home-carousel .carousel-control-prev-icon {
+    background-image: url("../images/left-arrow.png");
+    margin-left: -46px;
+    width: 41px;
+    height: 41px; }
+  #home-carousel .carousel-control-next-icon {
+    background-image: url("../images/right-arrow.png");
+    margin-right: -46px;
+    width: 41px;
+    height: 41px; }
+  #home-carousel .carousel-control-next, #home-carousel .carousel-control-prev {
+    width: 6%;
+    opacity: 1; }
+  .container-fluid .row {
+    margin-top: -4em; }
+    .container-fluid .row .col-sm-12 {
+      padding: 2em 0 2em 15.5em; }
+  .navbar.navbar-toggleable-md {
+    max-height: 45px;
+    margin: 35px 0;
+    margin-bottom: 4em;
+    background: linear-gradient(to bottom, #666666 0%, #000000 100%); }
+  .home-secondary-info {
+    width: 95%;
+    margin: 0 auto 2.5em; }
+  footer {
+    margin-top: 3em; } }
